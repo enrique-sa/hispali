@@ -1,16 +1,20 @@
-export default function UserIcon() {
+import React from "react";
+
+interface CloseIconProps {
+  width?: string;
+  height?: string;
+}
+
+export default function CloseIcon({ width, height }: CloseIconProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
+      viewBox="0 0 16 16"
       fill="currentColor"
-      className="w-6 h-6"
+      width={width}
+      height={height}
     >
-      <path
-        fillRule="evenodd"
-        d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z"
-        clipRule="evenodd"
-      />
+      <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
     </svg>
   );
 }
